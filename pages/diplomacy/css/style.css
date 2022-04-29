@@ -1,0 +1,438 @@
+*{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+ul{
+    list-style: none;
+}
+img{
+    vertical-align: top;
+}
+button{
+    border:0;
+    background-color: transparent;
+}
+.pc{display: none;}
+header{
+    width: 100%;
+    position: relative;
+    height:100vh;
+    overflow: hidden;
+}
+.background{
+    transform: translate(-60%);
+    transform: scale(1.0);
+    animation-name:back;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes back{
+    0%{transform: scale(1.2);}
+    100%{transform: scale(1);}
+}
+nav{
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    margin-bottom:5px;
+    order:1;
+    animation-name:down1;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+@keyframes down1{
+    0%{transform: translateY(-20%);
+    opacity: 0;}
+    100%{transform: translateY(0);
+    opacity: 1;}
+}
+h1 img{
+    width: 100%;
+}
+.star{
+    width: 70px;
+    height: 70px;
+    position:absolute;
+    top:0;
+    right:0;
+    transform: translate(50%,-50%);
+    animation-name:shine;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+@keyframes shine{
+    0%{width: 70px; height: 70px;}
+    100%{width: 130px; height: 130px;}
+}
+.star img{
+    width: 100%;
+}
+.gnb{
+    margin-top:180px;
+    display: flex;
+    flex-direction: column;
+    font-size:14px;
+    align-items: center;
+    order:2;
+}
+.gnb li{
+    width: 210px;
+    height: 45px;
+    background-color: rgba(26,26,26,0.4);
+    border:2px solid white;
+    border-radius: 210px;
+    line-height: 45px;
+    margin-bottom:10px;
+    color:rgba(255, 255, 255, 0.5);
+    transition:all 0.3s;
+    opacity: 0;
+}
+.gnb li:first-child{
+    animation-name:up1;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.gnb li:nth-child(2){
+    animation-name:up2;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+.gnb li:nth-child(3){
+    animation-name: up3;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes up1{
+    0%{transform: translateY(20%);
+    opacity: 0;}
+    100%{transform: translateY(0);
+    opacity: 1;}
+}
+@keyframes up2{
+    0%{transform: translateY(20%);
+    opacity: 0;}
+    100%{transform: translateY(0);
+    opacity: 1;}
+}
+@keyframes up3{
+    0%{transform: translateY(20%);
+    opacity: 0;}
+    100%{transform: translateY(0);
+    opacity: 1;}
+}
+.gnb li a{
+    display: block;
+}
+.gnb li:first-child{
+    background-color: rgba(14, 47, 79, 0.77);
+    color:white;
+}
+.gnb li:hover{
+    background-color: rgba(14, 47, 79, 0.77);
+    color:white;
+}
+.mark{
+    order:3;
+    width: 125px;
+    margin-top:30px;
+}
+.closer{
+    margin-top:30px;
+    order:4;
+    font-size:12px;
+    width: 170px;
+    height: 35px;
+    line-height: 35px;
+    font-weight: 300;
+    color:rgba(255,255,255,0.7);
+    background-color: rgba(162,121,66,0.7);
+    border-radius: 10px;
+    animation-name:up4;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes up4{
+    0%{transform: translateY(20%);opacity: 0;}
+    100%{transform: translateY(0);opacity: 1;}
+}
+.closer a{
+    display: block;
+}
+main{
+    position: relative;
+    background-color: #0a1e42;
+}
+main .mainwrap{
+    padding-top:30px;
+}
+main .mainwrap p{
+    color:#576d94;
+    text-align: center;
+    font-size:12px;
+    margin-bottom:20px;
+}
+main .mainwrap .title{
+    width: 120px;
+    margin:0 auto;
+}
+main .mainwrap .title img{
+    width: 100%;
+}
+main .mainwrap .countury{
+    margin-top:30px;    
+}
+main .mainwrap .countury .list{
+    padding: 0 20px 100px;
+    max-width: 80%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+main .mainwrap .countury ul{
+    position: relative;
+    width: 100%;
+}
+main .mainwrap .countury button{
+    display:block;
+    font-size:22px;
+    margin:10px auto;
+    height: 95px;
+    width: 100%;
+    color:rgba(255, 255, 255, 0.8);
+    background-color: #1d2f4d;
+}
+main .mainwrap .countury button span{
+    display: block;
+    font-size:12px;
+    color:#647796;
+}
+main .mainwrap .countury button.active{
+    border-top:5px solid #6592d5;
+    background-color: #263853;
+}
+.sub{
+    box-sizing: border-box;
+    position: relative;
+    bottom:10px;
+    height:320px;
+    overflow-y: scroll;
+    padding-left:40px;
+    display: none;
+    background-color: #1d2f4d;
+    color:#647796;
+    font-size:14px;
+    padding-bottom:10px;
+}
+.sub li:hover{
+    color:rgba(255, 255, 255, 0.8);
+}
+.sub span{
+    padding-left:20px;
+    line-height: 14px;
+    position: absolute;
+    left:0;
+}
+.sub .space{
+    margin-top:10px;
+}
+.up{
+    position:fixed;
+    bottom:30px;
+    right:10px;
+    width: 75px;
+    height: 75px;
+    display: block;
+    z-index: 10;
+    background-color: white;
+    border-radius: 50%;
+}
+.sub::-webkit-scrollbar{
+    width:8px;
+}
+.sub::-webkit-scrollbar-thumb{
+    background-color: #0a1e42;
+    border-radius: 2px;
+}
+
+@media all and (min-width:738px){
+    .pc{
+        display: block;
+    }
+    body::-webkit-scrollbar{
+        display: none;
+    }
+    nav{
+        top:50%
+    }
+    h1{
+        width: 620px;
+        animation-fill-mode: forwards;
+    }
+    @keyframes down1{
+        0%{transform: translateY(0%);
+            opacity: 0;}
+            100%{transform: translateY(20%);
+            opacity: 1;}
+    }
+    .gnb{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .gnb li{
+        font-size:18px;
+        width: 220px;
+        height: 55px;
+        line-height: 55px;
+    }
+    .gnb li:nth-child(2){
+        margin:0 20px;
+    }
+    .closer{
+        order:3;
+        margin-top:30px;
+        width: 210px;
+        height: 50px;
+        font-size:16px;
+        line-height: 50px;
+    }
+    .mark{
+        order:4;
+        margin-top:0;
+    }
+    .up{
+        display: none;
+    }
+    main{
+        overflow-y: scroll;
+        background-image: url(../images/bg_intro_2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+    }
+    main .mainwrap>p{
+        margin-top:25px;
+        font-size:22px;
+        animation-name:down2;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+    main .mainwrap .title{
+        width: 240px;
+        margin-bottom:40px;
+        animation-name:down2;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+    @keyframes down2{
+        0%{transform: translateY(-20%);opacity: 0;}
+        100%{transform: translateY(0);opacity: 1;}
+    }
+    main .mainwrap .countury ul{
+        width: 49%;
+        animation:down3;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+    @keyframes down3{
+        0%{transform: translateY(-5%);opacity: 0;}
+        100%{transform: translateY(0%);opacity: 1;}
+    }
+    main .mainwrap .countury ul button{
+        background-color: rgba(255,255,255,0.1);
+        height: 110px;
+    }
+    main .mainwrap .countury ul .sub{
+        width: 100%;
+        height: 446px;
+        font-size:18px;
+        background-color: rgba(255,255,255,0.1);
+        padding-bottom:20px;
+        padding-left:50px;
+        text-indent: 20px;
+    }
+    main .mainwrap .countury ul button{
+        font-size:24px;
+    }
+    main .mainwrap .countury ul button span{
+        font-size: 16px;
+    }
+    main .mainwrap .countury ul button.active{
+        background-color: #263853;
+    }
+    main .mainwrap .countury ul .sub.active{
+        background-color: #263853;
+    }
+    main .mainwrap .countury ul .sub li span{
+        line-height: 18px;
+    }
+    main .mainwrap .countury ul:first-child .sub{
+        display: block;
+    }
+    main .mainwrap .countury ul:nth-child(2) .sub{
+        display: block;
+    }
+    .sub::-webkit-scrollbar-thumb{
+        background-color: #222;
+    }
+}
+
+@media all and (min-width:1081px){
+    .closer{
+        margin-top:100px;
+    }
+    .background{
+        width: 100vw;
+        height: 100vh;
+    }
+    .background img{
+        height: 100%;
+    }
+    .mark{
+        height: 40px;
+        margin-top:10px;
+    }
+    main .mainwrap .countury{
+        justify-content: space-between;
+    }
+    main .mainwrap .countury ul{
+        width: 24.5%;
+    }
+    main .mainwrap .countury ul .sub span{
+        padding-left:10px;
+    }
+}
+@media all and (min-width:1501px){
+    .mark{
+        width: 200px;
+        height: 60px;
+        position:absolute;
+        right:-220px;
+        bottom:155px;
+    }
+}
